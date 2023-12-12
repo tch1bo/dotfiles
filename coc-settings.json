@@ -1,0 +1,8 @@
+{
+    "coc.preferences.jumpCommand": "CocSplitIfNotOpen",
+    "suggest.noselect": true,
+    "inlayHint.display": false,
+    "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/16.0.2/clangd_16.0.2/bin/clangd",
+    // "clangd.trace.file": "/tmp/trace.json",
+    // "clangd.arguments": ["-log=verbose", "-pretty"]
+}
