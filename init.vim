@@ -16,12 +16,12 @@ Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
 Plug 'joshdick/onedark.vim'
-Plug 'adrianolaru/vim-adio'
+Plug 'AlexvZyl/nordic.nvim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'jackguo380/vim-lsp-cxx-highlight'
 Plug 'preservim/nerdtree'
 
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.4' }
 " Dependencies for telescope:
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -77,11 +77,11 @@ autocmd BufRead *.py let b:codefmt_formatter = 'black'
 " syntax enable
 " colorscheme onedark
 
-" Plug 'adrianolaru/vim-adio'
 syntax on
 set t_Co=256
 set background=dark
-colorscheme adio
+set termguicolors
+colorscheme nordic
 
 " Plug 'bling/vim-airline'
 let g:airline_theme='jellybeans'
