@@ -1,0 +1,85 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
+  "vim_mode": true,
+  "ui_font_size": 20,
+  "buffer_font_size": 20,
+  "theme": {
+    "mode": "dark",
+    "light": "Nordic",
+    "dark": "Nordic"
+  },
+  "buffer_font_family": "Ubuntu Mono",
+  "gutter": {
+    // Whether to show line numbers in the gutter.
+    "line_numbers": true,
+    // Whether to show runnables buttons in the gutter.
+    "runnables": true,
+    // Whether to show breakpoints in the gutter.
+    "breakpoints": true,
+    // Whether to show fold buttons in the gutter.
+    "folds": true,
+    // Minimum number of characters to reserve space for in the gutter.
+    "min_line_number_digits": 3
+  },
+  "git": {
+    "git_gutter": "tracked_files",
+    "gutter_debounce": null,
+    "inline_blame": {
+      "enabled": false
+    },
+    "hunk_style": null
+  },
+  "terminal": {
+    "detect_venv": "off"
+  },
+  "diagnostics": {
+    "lsp_pull_diagnostics": {
+      "enabled": true,
+      "debounce_ms": 50
+    },
+    "button": true,
+    "include_warnings": true,
+    "inline": {
+      "enabled": true,
+      "update_debounce_ms": 150,
+      "padding": 4,
+      "min_column": 0,
+      "max_severity": null
+    }
+  },
+  "show_edit_predictions": false,
+  "completions": {
+    "lsp": true,
+    "lsp_fetch_timeout_ms": 0,
+    "lsp_insert_mode": "replace_suffix",
+    "show_completions": true,
+    "show_completions_on_input": true,
+    "show_completion_documentation": true,
+    "show_edit_predictions": true,
+    "zeta": false
+  },
+  "lsp": {
+    "python-lsp-server": {},
+    "pyright": {
+      "settings": {
+        "python.analysis": {
+          "diagnosticMode": "workspace",
+          "typeCheckingMode": "strict"
+        },
+        "python": {
+          "pythonPath": ".venv/bin/python"
+        }
+      }
+    }
+  }
+}
