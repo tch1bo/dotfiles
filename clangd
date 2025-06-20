@@ -1,0 +1,15 @@
+Diagnostics:
+  ClangTidy:
+    Add:
+        - abseil-*
+        - bugprone-*
+        - bugprone-use-after-move
+        - clang-analyzer-*
+        - concurrency-*
+        - cppcoreguidelines-*
+        - google-*
+        - misc-*
+    Remove:
+        - cppcoreguidelines-avoid-const-or-ref-data-members
+        - misc-non-private-member-variables-in-classes
+        - bugprone-easily-swappable-parameters
