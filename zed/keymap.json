@@ -14,25 +14,48 @@
       "ctrl-k": "workspace::ActivatePaneUp",
       "ctrl-j": "workspace::ActivatePaneDown",
       "ctrl-n": "workspace::ToggleLeftDock",
+      "ctrl-/": "workspace::ToggleRightDock",
       "ctrl-shift-j": "pane::SplitDown",
       "ctrl-shift-k": "pane::SplitUp",
       "ctrl-shift-h": "pane::SplitLeft",
-      "ctrl-shift-l": "pane::SplitRight"
+      "ctrl-shift-l": "pane::SplitRight",
+      "ctrl-m": "search::FocusSearch"
     }
   },
   {
-    "context": "Workspace",
+    "context": "Dock",
     "bindings": {
-      // "shift shift": "file_finder::Toggle"
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown"
     }
   },
   {
-    "context": "Editor"
+    "context": "Editor",
+    "bindings": {
+      "ctrl-m": "search::FocusSearch"
+    }
   },
   {
     "context": "Editor && vim_mode == insert && !menu",
     "bindings": {
       // "j k": "vim::SwitchToNormalMode"
     }
+  },
+  {
+    "context": "vim_mode == normal || vim_mode == visual",
+    "bindings": {
+      "s": "vim::PushSneak",
+      "shift-s": "vim::PushSneakBackward"
+    }
   }
+  // {
+  //   "context": "Editor && (showing_code_actions || showing_completions)",
+  //   "bindings": {
+  //     // "tab": "editor::ContextMenuNext",
+  //     "tab": "editor::ConfirmCompletion",
+  //     "shift-tab": "editor::ContextMenuPrevious"
+  //   }
+  // }
 ]

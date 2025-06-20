@@ -7,6 +7,15 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "agent": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4"
+    },
+    "model_parameters": [],
+    "single_file_review": false,
+    "version": "2"
+  },
   "features": {
     "edit_prediction_provider": "zed"
   },
@@ -45,7 +54,7 @@
   "diagnostics": {
     "lsp_pull_diagnostics": {
       "enabled": true,
-      "debounce_ms": 50
+      "debounce_ms": 150
     },
     "button": true,
     "include_warnings": true,
@@ -60,7 +69,6 @@
   "show_edit_predictions": false,
   "completions": {
     "lsp": true,
-    "lsp_fetch_timeout_ms": 0,
     "lsp_insert_mode": "replace_suffix",
     "show_completions": true,
     "show_completions_on_input": true,
@@ -68,17 +76,25 @@
     "show_edit_predictions": true,
     "zeta": false
   },
+  "languages": {
+    "Python": {
+      "language_servers": ["pyright", "!pylsp"]
+    }
+  },
   "lsp": {
-    "python-lsp-server": {},
     "pyright": {
       "settings": {
+        "pyright.openFilesOnly": true,
         "python.analysis": {
           "diagnosticMode": "workspace",
-          "typeCheckingMode": "strict"
-        },
-        "python": {
-          "pythonPath": ".venv/bin/python"
+          "typeCheckingMode": "strict",
+          "autoImportCompletions": true
         }
+      }
+    },
+    "clangd": {
+      "binary": {
+        "arguments": ["--clang-tidy"]
       }
     }
   }
